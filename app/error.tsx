@@ -1,0 +1,2 @@
+'use client';
+export default function AppError({reset}:{reset:()=>void}){return <main style={{padding:32,maxWidth:650,margin:'10vh auto',lineHeight:1.7}}><img src="/brand/novalis-symbol.svg" alt="NOVALIS" width="64"/><h1>Diese Ansicht konnte nicht geladen werden.</h1><p>Bitte öffne sie erneut. Eine fehlgeschlagene Aktion gilt nicht als gespeichert.</p><button onClick={reset} className="button primary">Erneut versuchen</button><p><a className="text-button" href="tel:112">Akute Lebensgefahr: 112</a></p></main>}

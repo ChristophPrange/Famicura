@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="novalis-title">
+<title id="novalis-title">NOVALIS App-Icon</title>
+<defs>
+  <linearGradient id="novalis-crown" x1="438" y1="40" x2="588" y2="468" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#F5900C"/>
+    <stop offset=".30" stop-color="#FFA40E"/>
+    <stop offset=".68" stop-color="#FF7A05"/>
+    <stop offset="1" stop-color="#D53500"/>
+  </linearGradient>
+  <linearGradient id="novalis-inner-left" x1="115" y1="284" x2="470" y2="825" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#CD3600"/>
+    <stop offset=".13" stop-color="#FF6D00"/>
+    <stop offset=".51" stop-color="#FF9604"/>
+    <stop offset="1" stop-color="#F58400"/>
+  </linearGradient>
+  <linearGradient id="novalis-inner-right" x1="885" y1="284" x2="530" y2="825" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#CD3600"/>
+    <stop offset=".13" stop-color="#FF6D00"/>
+    <stop offset=".51" stop-color="#FF9604"/>
+    <stop offset="1" stop-color="#F58400"/>
+  </linearGradient>
+  <linearGradient id="novalis-outer-left" x1="25" y1="435" x2="420" y2="845" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#DC7900"/>
+    <stop offset=".23" stop-color="#EE8F00"/>
+    <stop offset=".66" stop-color="#DD4D00"/>
+    <stop offset="1" stop-color="#B52C00"/>
+  </linearGradient>
+  <linearGradient id="novalis-outer-right" x1="975" y1="435" x2="580" y2="845" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#DC7900"/>
+    <stop offset=".23" stop-color="#EE8F00"/>
+    <stop offset=".66" stop-color="#DD4D00"/>
+    <stop offset="1" stop-color="#B52C00"/>
+  </linearGradient>
+</defs>
+<rect width="512" height="512" rx="0" fill="#F7F0E6"/><g transform="translate(58 83) scale(.396)"><path d="M 500 6 C 419 85 340 181 294 309 C 343 335 381 367 422 409 C 462 450 493 463 535 446 C 578 428 604 382 706 309 C 660 181 581 85 500 6 Z M 580 335 A 80 80 0 1 0 420 335 A 80 80 0 1 0 580 335 Z" fill="url(#novalis-crown)" fill-rule="evenodd"/>
+<path d="M 91 273 C 207 265 336 361 397 520 C 439 630 460 747 477 831 C 368 785 291 688 240 573 C 188 458 151 360 91 279 C 88 275 88 274 91 273 Z" fill="url(#novalis-inner-left)" fill-rule="evenodd"/>
+<path d="M 909 273 C 793 265 664 361 603 520 C 561 630 540 747 523 831 C 632 785 709 688 760 573 C 812 458 849 360 909 279 C 912 275 912 274 909 273 Z" fill="url(#novalis-inner-right)" fill-rule="evenodd"/>
+<path d="M 5 434 C 51 433 111 455 151 484 C 184 613 266 749 430 838 C 202 855 12 714 5 434 Z" fill="url(#novalis-outer-left)" fill-rule="evenodd"/>
+<path d="M 995 434 C 949 433 889 455 849 484 C 816 613 734 749 570 838 C 798 855 988 714 995 434 Z" fill="url(#novalis-outer-right)" fill-rule="evenodd"/></g>
+</svg>

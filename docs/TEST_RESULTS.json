@@ -1,0 +1,244 @@
+{
+  "executedAt": "2026-10-29T14:48:51.083Z",
+  "environment": "Node 24 + SQLite / in-process D1 adapter and private R2 test adapter; not a hosted identity penetration test",
+  "passed": 59,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Missing account identity returns 401",
+      "status": "PASS"
+    },
+    {
+      "name": "First account has no fabricated people or health data",
+      "status": "PASS"
+    },
+    {
+      "name": "Personal display preferences persist across requests",
+      "status": "PASS"
+    },
+    {
+      "name": "Two care recipients remain explicitly assigned",
+      "status": "PASS"
+    },
+    {
+      "name": "Role-specific invitations are issued as opaque tokens",
+      "status": "PASS"
+    },
+    {
+      "name": "Invitations attach an independent second account",
+      "status": "PASS"
+    },
+    {
+      "name": "An invitation cannot be reused",
+      "status": "PASS"
+    },
+    {
+      "name": "Recipient scopes prevent access to a second patient",
+      "status": "PASS"
+    },
+    {
+      "name": "Private self-assessments do not appear to other members",
+      "status": "PASS"
+    },
+    {
+      "name": "Unassigned task can be created without an assumed acceptance",
+      "status": "PASS"
+    },
+    {
+      "name": "Two competing task takeovers produce only one success",
+      "status": "PASS"
+    },
+    {
+      "name": "One person cannot accept on behalf of another",
+      "status": "PASS"
+    },
+    {
+      "name": "Substitution request retains existing responsibility",
+      "status": "PASS"
+    },
+    {
+      "name": "Medication plan uses structured amounts and units",
+      "status": "PASS"
+    },
+    {
+      "name": "Everyday helper cannot read or mutate medication data",
+      "status": "PASS"
+    },
+    {
+      "name": "Concurrent duplicate dose confirmations produce exactly one event",
+      "status": "PASS"
+    },
+    {
+      "name": "Dose correction requires a reason",
+      "status": "PASS"
+    },
+    {
+      "name": "Dose correction is append-only and preserves the original",
+      "status": "PASS"
+    },
+    {
+      "name": "Plan changes retain a historical revision",
+      "status": "PASS"
+    },
+    {
+      "name": "A dose outside the recorded schedule is rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Appointment completion produces a personal follow-up event",
+      "status": "PASS"
+    },
+    {
+      "name": "Repeated job processing does not duplicate notices",
+      "status": "PASS"
+    },
+    {
+      "name": "Snooze persists as a future server-side job",
+      "status": "PASS"
+    },
+    {
+      "name": "A draft follow-up remains private",
+      "status": "PASS"
+    },
+    {
+      "name": "A valid file is attached to the correct draft",
+      "status": "PASS"
+    },
+    {
+      "name": "Publishing makes result and attachment available to authorized users only",
+      "status": "PASS"
+    },
+    {
+      "name": "Unsafe file signatures are rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "General export excludes private answers",
+      "status": "PASS"
+    },
+    {
+      "name": "QR share requires explicit consent and uses no health payload in token",
+      "status": "PASS"
+    },
+    {
+      "name": "Revoked QR share cannot be used again",
+      "status": "PASS"
+    },
+    {
+      "name": "Membership revocation blocks existing file access",
+      "status": "PASS"
+    },
+    {
+      "name": "Personal availability requires an actual time window",
+      "status": "PASS"
+    },
+    {
+      "name": "Overlapping windows are merged in the time balance",
+      "status": "PASS"
+    },
+    {
+      "name": "Nonexistent daylight-saving local time is rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Summer and winter dates retain the same local clock time",
+      "status": "PASS"
+    },
+    {
+      "name": "Unknown inventory is not converted into a fictional range",
+      "status": "PASS"
+    },
+    {
+      "name": "Structured FHIR export excludes personal questionnaires",
+      "status": "PASS"
+    },
+    {
+      "name": "Logos are actual SVG vectors without embedded raster data",
+      "status": "PASS"
+    },
+    {
+      "name": "Full SQLite backup and restore preserve tables and history",
+      "status": "PASS"
+    },
+    {
+      "name": "Server export contains exactly the selected recipient",
+      "status": "PASS"
+    },
+    {
+      "name": "Requested task creates a targeted in-app notice",
+      "status": "PASS"
+    },
+    {
+      "name": "Finite weekly series preserves local time across DST",
+      "status": "PASS"
+    },
+    {
+      "name": "Future series edits leave past and completed entries unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "Series edits reject moving instances to a different date",
+      "status": "PASS"
+    },
+    {
+      "name": "Expired and revoked invitations are both rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Rescheduling removes stale notices and replaces the pending reminder",
+      "status": "PASS"
+    },
+    {
+      "name": "A cancelled appointment never generates a follow-up prompt",
+      "status": "PASS"
+    },
+    {
+      "name": "Cross-case double booking reports a conflict without case details",
+      "status": "PASS"
+    },
+    {
+      "name": "Availability suggestions respect windows, absences and confirmed tasks",
+      "status": "PASS"
+    },
+    {
+      "name": "Declining a substitution keeps the coverage gap visible",
+      "status": "PASS"
+    },
+    {
+      "name": "Weekly jobs are unique per recipient circle and account",
+      "status": "PASS"
+    },
+    {
+      "name": "No unauthenticated medical AI endpoint is exposed",
+      "status": "PASS"
+    },
+    {
+      "name": "Date-only appointment has no invented clock time or reminder",
+      "status": "PASS"
+    },
+    {
+      "name": "A second independent circle preserves existing data and personal preferences",
+      "status": "PASS"
+    },
+    {
+      "name": "Private medication events stay private and are excluded from export",
+      "status": "PASS"
+    },
+    {
+      "name": "A private flag cannot bypass a helper health permission",
+      "status": "PASS"
+    },
+    {
+      "name": "Read-only health permission cannot be escalated through a private record",
+      "status": "PASS"
+    },
+    {
+      "name": "Completed care work cannot be forged for someone else",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid ending timestamps are rejected at the API boundary",
+      "status": "PASS"
+    }
+  ]
+}

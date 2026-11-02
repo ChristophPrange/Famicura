@@ -1,0 +1,2 @@
+export const metadata={title:'NOVALIS – Responsive Prüfung',robots:{index:false,follow:false}};
+export default function Review(){return <main style={{padding:24,background:'#e6ddd1',minHeight:'100vh'}}><h1 style={{fontSize:20}}>NOVALIS · schmale Ansicht (390 CSS-Pixel)</h1><p style={{fontSize:13}}>Interaktive Prüfung im Desktopbrowser, kein Test auf einem physischen Mobilgerät.</p><iframe title="NOVALIS Smartphone-Vorschau" src="/" width="390" height="844" style={{display:'block',border:'1px solid #bda58b',borderRadius:20,background:'#f7f3ed'}}/></main>}

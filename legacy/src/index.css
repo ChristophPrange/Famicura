@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    @apply bg-cream-100 text-ink antialiased;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.125rem;
+  }
+  button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { @apply outline outline-[3px] outline-offset-2 outline-sage-600; }
+}
+
+@layer components {
+  .card { @apply bg-white rounded-2xl border border-cream-300 p-4 shadow-[0_1px_2px_rgba(60,50,30,0.05)]; }
+  .btn { @apply inline-flex items-center justify-center gap-2 min-h-[52px] px-5 rounded-xl font-semibold text-lg transition active:scale-[0.98] disabled:opacity-50; }
+  .btn-primary { @apply btn bg-sage-600 text-white hover:bg-sage-700; }
+  .btn-secondary { @apply btn bg-sage-50 text-sage-800 border-2 border-sage-200 hover:bg-sage-100; }
+  .btn-ghost { @apply btn bg-transparent text-sage-800 hover:bg-sage-50; }
+  .btn-danger { @apply btn bg-red-700 text-white hover:bg-red-800; }
+  .input { @apply w-full min-h-[52px] rounded-xl border-2 border-cream-300 bg-white px-4 text-lg focus:border-sage-500 focus:outline-none; }
+  .label { @apply block text-base font-semibold text-ink-soft mb-1; }
+  .h-section { @apply text-xl font-bold text-ink mt-6 mb-3; }
+  .chip { @apply inline-flex items-center rounded-full px-3 py-1 text-base font-medium; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; font-size: 12pt; }
+  .card { border: 1px solid #ccc; box-shadow: none; break-inside: avoid; }
+}
+
+/* Hoher Kontrast (Einstellungen → Darstellung) */
+.hc body,
+.hc .bg-cream-100,
+.hc .bg-cream-50 { background-color: #ffffff; }
+.hc .text-ink-soft { color: #1f1e1b; }
+.hc .text-sage-700,
+.hc .text-sage-800 { color: #1d3324; }
+.hc .border-cream-300,
+.hc .border-cream-200 { border-color: #3f3c36; }
+.hc .card { border-width: 2px; border-color: #3f3c36; }
+.hc .bg-cream-200 { background-color: #e7e2d8; }
+.hc .btn-primary { background-color: #25382b; }
+.hc .btn-ghost { text-decoration: underline; }
+.hc :focus-visible { outline-color: #000; outline-width: 4px; }
