@@ -1,0 +1,6 @@
+{
+  "framework": null,
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "PAGES_BASE=/ npx vite build --config vite.pages.config.ts",
+  "outputDirectory": "dist-pages"
+}

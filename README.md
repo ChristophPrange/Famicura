@@ -56,6 +56,13 @@ Die ursprünglichen problematischen KI-, QR- und Fragebogenwege in `legacy/` wer
 
 Vor einem Echtbetrieb sind unter anderem Schadsoftware-Quarantäne, Datenschutz- und Betriebsfreigabe, belastbare Lösch- und Backup-Prozesse, weitere Authentifizierungs- und Sicherheitstests sowie pflegefachliche und regulatorische Prüfungen erforderlich. Details: `docs/SECURITY_PRIVACY.md` und `docs/DIPA_ROADMAP.md`.
 
+## Demo auf Vercel oder GitHub Pages
+
+Für eine reine Vorführung reicht eine statische Fassung ohne Server: `pages/main.tsx` rendert dieselbe Oberfläche, `/api/*` gibt es dort nicht, also startet nur die fiktive Beispielfamilie.
+
+- **Vercel:** `vercel.json` baut mit `PAGES_BASE=/ npx vite build --config vite.pages.config.ts` nach `dist-pages`.
+- **GitHub Pages:** `npx vite build --config vite.pages.config.ts` (Basis `/Famicura/`, mit `PAGES_BASE` änderbar) und `dist-pages` veröffentlichen.
+
 ## Veröffentlichen auf Cloudflare (eigenes Konto)
 
 Vercel passt nicht: Die App braucht Cloudflare Workers, D1 und R2. Kostenlos geht es über Cloudflare Workers Builds:
