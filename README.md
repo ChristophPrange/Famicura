@@ -55,3 +55,20 @@ Die ursprünglichen problematischen KI-, QR- und Fragebogenwege in `legacy/` wer
 `docs/TEST_RESULTS.json` enthält die tatsächlich ausgeführten automatisierten Tests, `docs/BROWSER_QA.md` die manuell geprüften Browserabläufe. Die 60 Anforderungen in `docs/ACCEPTANCE_MATRIX.md` sind bewusst nicht pauschal als bestanden markiert. Lokale Adaptertests ersetzen keine unabhängige Sicherheitsprüfung, echte Mehrgeräteprüfung oder Prüfung mit assistiven Technologien.
 
 Vor einem Echtbetrieb sind unter anderem Schadsoftware-Quarantäne, Datenschutz- und Betriebsfreigabe, belastbare Lösch- und Backup-Prozesse, weitere Authentifizierungs- und Sicherheitstests sowie pflegefachliche und regulatorische Prüfungen erforderlich. Details: `docs/SECURITY_PRIVACY.md` und `docs/DIPA_ROADMAP.md`.
+
+## Demo auf Vercel oder GitHub Pages
+
+Für eine reine Vorführung reicht eine statische Fassung ohne Server: `pages/main.tsx` rendert dieselbe Oberfläche, `/api/*` gibt es dort nicht, also startet nur die fiktive Beispielfamilie.
+
+- **Vercel:** `vercel.json` baut mit `PAGES_BASE=/ npx vite build --config vite.pages.config.ts` nach `dist-pages`.
+- **GitHub Pages:** `npx vite build --config vite.pages.config.ts` (Basis `/Famicura/`, mit `PAGES_BASE` änderbar) und `dist-pages` veröffentlichen.
+
+## Veröffentlichen auf Cloudflare (eigenes Konto)
+
+Vercel passt nicht: Die App braucht Cloudflare Workers, D1 und R2. Kostenlos geht es über Cloudflare Workers Builds:
+
+1. Im Cloudflare-Dashboard **Workers & Pages → Erstellen → Repository importieren** und dieses Repo wählen.
+2. Name des Workers: `novalis-care` (muss zum Namen in der gebauten `wrangler.json` passen).
+3. Build-Befehl `pnpm build`, Deploy-Befehl `npx wrangler deploy`. Umgebungsvariable `NODE_VERSION=22`.
+
+Ohne weitere Angaben wird nur die **Demo** ausgeliefert: Workers Builds setzt `WORKERS_CI=1`, dann lässt `vite.config.ts` die Bindings für D1 und R2 weg (lokal erzwingbar mit `FAMICURA_DEMO_ONLY=1`). Persönliche Anmeldung ist dort bewusst nicht möglich: `worker/index.ts` verwirft die `oai-authenticated-*`-Header, weil sie außerhalb von OpenAI Sites jeder fälschen könnte. Nur wo eine vertrauenswürdige Plattform sie setzt, darf `TRUSTED_IDENTITY_HEADERS=1` gesetzt werden. Für echte Daten muss zuerst eine eigene Anmeldung eingebaut werden; dann `D1_DATABASE_ID` setzen und R2 einrichten.
